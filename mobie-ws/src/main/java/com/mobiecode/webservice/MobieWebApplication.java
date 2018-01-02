@@ -1,15 +1,15 @@
-package com.mobiecode.webservice.run;
+package com.mobiecode.webservice;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
+import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
+@ComponentScan(basePackages="com.mobiecode.webservice.controller")
 @EnableAutoConfiguration
-@EnableJpaAuditing
 public class MobieWebApplication {
-    public static void main(String[] args){
-        SpringApplication.run(MobieWebApplication.class);
+    public static void main(String[] args) {
+        SpringApplication.run(MobieWebApplication.class, args);
     }
 }
