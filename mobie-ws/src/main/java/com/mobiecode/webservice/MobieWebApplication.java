@@ -1,18 +1,18 @@
 package com.mobiecode.webservice;
 
-import org.springframework.beans.factory.config.PropertyPlaceholderConfigurer;
+import com.mobiecode.domain.configuration.DatabaseConfig;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.annotation.Bean;
-import org.springframework.core.io.ClassPathResource;
-import org.springframework.core.io.Resource;
 
-import java.util.ArrayList;
-import java.util.List;
+import javax.sql.DataSource;
 
 @SpringBootApplication
 //@ComponentScan(basePackages="com.mobiecode.webservice.controller")
 public class MobieWebApplication {
+
+    @Autowired
+    private DatabaseConfig databaseConfig;
 
     public static void main(String[] args) {
         SpringApplication.run(MobieWebApplication.class, args);
@@ -23,7 +23,7 @@ public class MobieWebApplication {
         return application.sources(getClass());
     }*/
 
-    @Bean
+    /*@Bean
     public PropertyPlaceholderConfigurer properties() {
         final PropertyPlaceholderConfigurer ppc = new PropertyPlaceholderConfigurer();
         ppc.setIgnoreResourceNotFound(true);
@@ -32,5 +32,5 @@ public class MobieWebApplication {
         resourceLst.add(new ClassPathResource("application-ws.properties"));
         ppc.setLocations(resourceLst.toArray(new Resource[]{}));
         return ppc;
-    }
+    }*/
 }
