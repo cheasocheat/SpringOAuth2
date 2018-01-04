@@ -1,4 +1,4 @@
-package com.mobiecode.domain.base;
+package com.mobiecode.domain.entity;
 
 import com.mobiecode.domain.util.RecordStatus;
 import org.springframework.data.annotation.CreatedDate;
@@ -29,6 +29,7 @@ public abstract class BaseEntity {
     }
 
     @Column(name = "rec_status")
+    @Enumerated(EnumType.STRING)
     public RecordStatus getStatus() {
         return status;
     }

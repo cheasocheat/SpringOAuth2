@@ -21,12 +21,12 @@ import java.util.Properties;
 @Configuration
 @PropertySource(value = {"classpath:database.properties", "classpath:hibernate.properties"})
 @EnableTransactionManagement
-public class PersistenceJPAConfig {
+public class JpaConfig {
 
     @Autowired
     private Environment env;
 
-    @Bean
+    @Bean(name = "mobieDataSource")
     public DataSource dataSource() {
         DriverManagerDataSource dataSource = new DriverManagerDataSource();
         dataSource.setDriverClassName(env.getProperty("db.driver"));

@@ -1,7 +1,6 @@
 package com.mobiecode.domain.entity;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import com.mobiecode.domain.base.BaseEntity;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
 import javax.persistence.*;
