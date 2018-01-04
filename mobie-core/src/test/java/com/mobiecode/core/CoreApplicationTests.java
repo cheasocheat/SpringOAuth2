@@ -1,5 +1,7 @@
 package com.mobiecode.core;
 
+import com.mobiecode.core.util.BaseUtil;
+import com.sun.xml.internal.rngom.parse.host.Base;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -11,5 +13,11 @@ public class CoreApplicationTests {
 
     @Test
     public void contextLoads() {
+
+    }
+
+    @Test
+    public void passwordEncode() {
+        System.out.println(BaseUtil.getInstance().getPasswordEncoder().encode("123456"));
     }
 }
