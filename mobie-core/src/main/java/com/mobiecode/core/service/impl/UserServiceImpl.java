@@ -24,17 +24,22 @@ public class UserServiceImpl implements UserService {
 
 
     @Override
+    public User findByUsername(String username) {
+        return userRepository.findByUsername(username);
+    }
+
+    @Override
     public User findUserByEmail(String email) {
         return userRepository.findByEmail(email);
     }
 
     @Override
     public void saveUser(User user) {
-        user.setUserPassword(BaseUtil.getInstance().getPasswordEncoder().encode(user.getUserPassword()));
+        user.setPassword(BaseUtil.getInstance().getPasswordEncoder().encode(user.getPassword()));
         user.setStatus(RecordStatus.PUB);
         user.setCreatedUser("Anomymous");
         user.setUpdatedUser("Anomymous");
-        Role role = roleRepository.findByRoleDesc("ADMIN");
+        Role role = roleRepository.findByName("ADMIN");
         user.setRoles(new HashSet<>(Arrays.asList(role)));
         userRepository.save(user);
     }

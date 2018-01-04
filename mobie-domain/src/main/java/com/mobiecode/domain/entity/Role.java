@@ -4,6 +4,7 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
 import javax.persistence.*;
+import java.util.Set;
 
 @Entity
 @Table(name = "tb_role")
@@ -11,7 +12,8 @@ import javax.persistence.*;
 @JsonIgnoreProperties(value = {"createdAt", "updatedAt"}, allowGetters = true)
 public class Role extends BaseEntity {
 
-    private String roleDesc;
+    private String name;
+    private Set<User> users;
 
     @Override
     @Id
@@ -21,12 +23,21 @@ public class Role extends BaseEntity {
         return id;
     }
 
-    @Column(name = "role_desc")
-    public String getRoleDesc() {
-        return roleDesc;
+    @Column(name = "role_name")
+    public String getName() {
+        return name;
     }
 
-    public void setRoleDesc(String roleDesc) {
-        this.roleDesc = roleDesc;
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    @ManyToMany(mappedBy = "roles")
+    public Set<User> getUsers() {
+        return users;
+    }
+
+    public void setUsers(Set<User> users) {
+        this.users = users;
     }
 }

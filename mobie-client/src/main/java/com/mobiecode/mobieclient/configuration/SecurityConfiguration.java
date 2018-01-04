@@ -41,32 +41,49 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-        http
-                .authorizeRequests()
-                .antMatchers("/").permitAll()
-                .antMatchers("/login").permitAll()
-                .antMatchers("/registration").permitAll()
+//        http
+//                .authorizeRequests()
+//                .antMatchers("/").permitAll()
+//                .antMatchers("/login").permitAll()
+//                .antMatchers("/registration").permitAll()
+//                .antMatchers("/role").permitAll()
+//                .antMatchers("/admin/**").hasAnyRole("ADMIN")
+//                .anyRequest().authenticated()
+//                .and()
+//                .csrf().disable().formLogin().loginPage("/login").failureUrl("/login?error=true")
+//                .defaultSuccessUrl("/admin/home")
+//                .usernameParameter("usr_name")
+//                .passwordParameter("usr_password")
+//                .and()
+//                .logout().logoutRequestMatcher(new AntPathRequestMatcher("/logout"))
+//                .and();
+//                .exceptionHandling().accessDeniedHandler(accessDeniedHandler)
+//                .accessDeniedPage("/access-denied");
+
+       /* http.
+                authorizeRequests()
+                .antMatchers("/","/home").permitAll()
                 .antMatchers("/role").permitAll()
-                .antMatchers("/admin/**").hasAnyRole("ADMIN")
-                .anyRequest().authenticated()
-                .and()
-                .csrf().disable().formLogin().loginPage("/login").failureUrl("/login?error=true")
+                .antMatchers("/registration").permitAll()
+                .antMatchers("/resources/**").permitAll()
+                .antMatchers("/admin/**").hasAuthority("ADMIN").anyRequest()
+                .authenticated().and().csrf().disable().formLogin()
+                .loginPage("/login")
+                .permitAll()
+                .failureUrl("/login?error=true")
                 .defaultSuccessUrl("/admin/home")
                 .usernameParameter("email")
-                .passwordParameter("usr_password")
-                .and()
-                .logout().logoutRequestMatcher(new AntPathRequestMatcher("/logout"))
-                .and()
-                .exceptionHandling().accessDeniedHandler(accessDeniedHandler)
+                .passwordParameter("password")
+                .and().logout()
+                .logoutRequestMatcher(new AntPathRequestMatcher("/logout"))
+                .logoutSuccessUrl("/").and().exceptionHandling()
                 .accessDeniedPage("/access-denied");
+*/
 
 
-       /* http.csrf().disable()
+        http.csrf().disable()
                 .authorizeRequests()
-                .antMatchers("/").permitAll()
-                .antMatchers("/login").permitAll()
-                .antMatchers("/registration").permitAll()
-                .antMatchers("/role").permitAll()
+                .antMatchers("/", "/home").permitAll()
                 .antMatchers("/admin/**").hasAnyRole("ADMIN")
                 .antMatchers("/user/**").hasAnyRole("USER")
                 .anyRequest().authenticated()
@@ -78,7 +95,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
                 .logout()
                 .permitAll()
                 .and()
-                .exceptionHandling().accessDeniedHandler(accessDeniedHandler);*/
+                .exceptionHandling().accessDeniedHandler(accessDeniedHandler);
     }
 
     @Override
@@ -87,4 +104,6 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
                 .ignoring()
                 .antMatchers("/resources/**", "/static/**", "/css/**", "/js/**", "/images/**");
     }
+
+
 }

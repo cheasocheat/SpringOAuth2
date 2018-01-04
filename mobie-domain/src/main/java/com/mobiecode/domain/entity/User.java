@@ -18,8 +18,8 @@ public class User extends BaseEntity{
     private String firstName;
     private String lastName;
     private String email;
-    private String userName;
-    private String userPassword;
+    private String username;
+    private String password;
     private Set<Role> roles;
 
     @Override
@@ -62,23 +62,24 @@ public class User extends BaseEntity{
     }
 
     @Column(name = "usr_name", nullable = false)
-    public String getUserName() {
-        return userName;
+    public String getUsername() {
+        return username;
     }
 
-    public void setUserName(String userName) {
-        this.userName = userName;
+    public void setUsername(String username) {
+        this.username = username;
     }
+
 
     @Column(name = "usr_password")
     @Length(min = 5, message = "*Your password must have at least 5 characters")
     @NotEmpty(message = "*Please provide your password")
-    public String getUserPassword() {
-        return userPassword;
+    public String getPassword() {
+        return password;
     }
 
-    public void setUserPassword(String userPassword) {
-        this.userPassword = userPassword;
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     @ManyToMany(cascade = CascadeType.ALL)
