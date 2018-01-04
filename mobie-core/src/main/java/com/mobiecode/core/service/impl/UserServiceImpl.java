@@ -1,13 +1,13 @@
-package com.mobiecode.mobieclient.service.impl;
+package com.mobiecode.core.service.impl;
 
+import com.mobiecode.core.repository.RoleRepository;
+import com.mobiecode.core.repository.UserRepository;
+import com.mobiecode.core.service.UserService;
+import com.mobiecode.core.util.BaseUtil;
 import com.mobiecode.domain.entity.Role;
 import com.mobiecode.domain.entity.User;
 import com.mobiecode.domain.util.RecordStatus;
-import com.mobiecode.mobieclient.repository.RoleRepository;
-import com.mobiecode.mobieclient.repository.UserRepository;
-import com.mobiecode.mobieclient.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import java.util.Arrays;
@@ -22,8 +22,6 @@ public class UserServiceImpl implements UserService {
     @Autowired
     private RoleRepository roleRepository;
 
-    @Autowired
-    private BCryptPasswordEncoder bCryptPasswordEncoder;
 
     @Override
     public User findUserByEmail(String email) {
@@ -32,7 +30,7 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public void saveUser(User user) {
-        user.setUserPassword(bCryptPasswordEncoder.encode(user.getUserPassword()));
+        user.setUserPassword(BaseUtil.getInstance().getPasswordEncoder().encode(user.getUserPassword()));
         user.setStatus(RecordStatus.PUB);
         user.setCreatedUser("Anomymous");
         user.setUpdatedUser("Anomymous");

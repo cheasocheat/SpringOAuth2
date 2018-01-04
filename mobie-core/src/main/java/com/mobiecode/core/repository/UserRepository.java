@@ -1,4 +1,4 @@
-package com.mobiecode.mobieclient.repository;
+package com.mobiecode.core.repository;
 
 import com.mobiecode.domain.entity.User;
 import org.springframework.data.jpa.repository.JpaRepository;

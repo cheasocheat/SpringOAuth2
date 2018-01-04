@@ -1,7 +1,7 @@
 package com.mobiecode.mobieclient.controller;
 
 import com.mobiecode.domain.entity.Role;
-import com.mobiecode.mobieclient.service.RoleService;
+import com.mobiecode.core.service.RoleService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.RequestMapping;

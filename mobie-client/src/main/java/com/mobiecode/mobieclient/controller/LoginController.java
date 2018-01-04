@@ -1,7 +1,7 @@
 package com.mobiecode.mobieclient.controller;
 
 import com.mobiecode.domain.entity.User;
-import com.mobiecode.mobieclient.service.UserService;
+import com.mobiecode.core.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;

@@ -1,4 +1,4 @@
-package com.mobiecode.mobieclient.service;
+package com.mobiecode.core.service;
 
 import com.mobiecode.domain.entity.Role;
 

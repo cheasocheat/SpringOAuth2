@@ -1,9 +1,9 @@
-package com.mobiecode.mobieclient.service.impl;
+package com.mobiecode.core.service.impl;
 
 import com.mobiecode.domain.entity.Role;
 import com.mobiecode.domain.util.RecordStatus;
-import com.mobiecode.mobieclient.repository.RoleRepository;
-import com.mobiecode.mobieclient.service.RoleService;
+import com.mobiecode.core.repository.RoleRepository;
+import com.mobiecode.core.service.RoleService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
