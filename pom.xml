@@ -14,6 +14,7 @@
 		<module>mobie-core</module>
 		<module>mobie-ws</module>
 		<module>mobie-domain</module>
+		<module>mobie-client</module>
     </modules>
 
 	<parent>
