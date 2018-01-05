@@ -1,20 +1,15 @@
 package com.mobiecode.mobieclient.controller;
 
-import com.mobiecode.domain.entity.Role;
-import com.mobiecode.core.service.RoleService;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.validation.BindingResult;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.servlet.ModelAndView;
 
-import javax.validation.Valid;
-
-@RestController
+@Controller
+@RequestMapping(value = "/admin")
 public class AdminController {
 
-    @Autowired
+    /*@Autowired
     private RoleService roleService;
 
     @RequestMapping(value="/role", method = RequestMethod.GET)
@@ -34,5 +29,11 @@ public class AdminController {
         modelAndView.addObject("role", new Role());
         modelAndView.setViewName("role");
         return modelAndView;
+    }*/
+
+
+    @GetMapping(value = {"", "/dashboard"})
+    public String getDashBoard(Model model) {
+        return "index";
     }
 }

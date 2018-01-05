@@ -14,8 +14,8 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 @Component
-public class CusAccessDeniedHandler implements AccessDeniedHandler {
-    private static Logger logger = LoggerFactory.getLogger(CusAccessDeniedHandler.class);
+public class LoginAccessDeniedHandler implements AccessDeniedHandler {
+    protected Logger logger = LoggerFactory.getLogger(LoginAccessDeniedHandler.class);
 
     @Override
     public void handle(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, AccessDeniedException e) throws IOException, ServletException {
@@ -23,6 +23,6 @@ public class CusAccessDeniedHandler implements AccessDeniedHandler {
         if (auth != null) {
             logger.info("User '" + auth.getName() + "' attempted to access the protected URL: " + httpServletRequest.getRequestURI());
         }
-        httpServletResponse.sendRedirect(httpServletRequest.getContextPath() + "/403");
+        httpServletResponse.sendRedirect(httpServletRequest.getContextPath() + "/access-denied");
     }
 }

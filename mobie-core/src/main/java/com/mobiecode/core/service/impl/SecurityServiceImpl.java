@@ -16,8 +16,10 @@ import org.springframework.stereotype.Service;
  * Created on 1/4/18 22:47
  */
 @Service
-public class SecurityServiceImpl implements SecurityService {
-    private static Logger logger = LoggerFactory.getLogger(SecurityService.class);
+public class SecurityServiceImpl  {
+
+   /* private static Logger logger = LoggerFactory.getLogger(SecurityService.class);
+
     @Autowired
     private AuthenticationManager authenticationManager;
 
@@ -44,5 +46,5 @@ public class SecurityServiceImpl implements SecurityService {
             SecurityContextHolder.getContext().setAuthentication(usernamePasswordAuthenticationToken);
             logger.debug(String.format("Auto login %s successfully!", username));
         }
-    }
+    }*/
 }
