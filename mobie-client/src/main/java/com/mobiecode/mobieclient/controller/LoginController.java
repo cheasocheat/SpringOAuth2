@@ -24,20 +24,7 @@ public class LoginController {
 //    @Autowired
 //    private SecurityService securityService;
 
-    @GetMapping(value = {"/login"})
-    public String login(Model model, String error, String logout) {
-        if (error != null)
-            model.addAttribute("error", "Your username and password is invalid.");
 
-        if (logout != null)
-            model.addAttribute("message", "You have been logged out successfully.");
-        return "login";
-    }
-
-    @GetMapping("/access-denied")
-    public String accessDenied() {
-        return "/error/access-denied";
-    }
 
  /*   @RequestMapping(value = {"/", "/welcome"}, method = RequestMethod.GET)
     public String welcome(Model model) {
