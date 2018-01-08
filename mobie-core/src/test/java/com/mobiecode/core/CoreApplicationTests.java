@@ -17,6 +17,6 @@ public class CoreApplicationTests {
 
     @Test
     public void passwordEncode() {
-        System.out.println(BaseUtil.getInstance().getPasswordEncoder().encode("123456"));
+        System.out.println(BaseUtil.getInstance().getPasswordEncoder().encode("password"));
     }
 }

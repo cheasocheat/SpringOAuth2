@@ -7,6 +7,8 @@ import com.mobiecode.core.service.RoleService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class RoleServiceImpl implements RoleService {
 
@@ -19,5 +21,10 @@ public class RoleServiceImpl implements RoleService {
         role.setCreatedUser("Anomymous");
         role.setUpdatedUser("Anomymous");
         repository.save(role);
+    }
+
+    @Override
+    public List<Role> getListRoles() {
+        return repository.findAll();
     }
 }

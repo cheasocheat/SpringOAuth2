@@ -62,8 +62,8 @@ public class LoginSuccessHandler implements AuthenticationSuccessHandler {
         } else if (isAdmin) {
             return "/admin/dashboard";
         } else {
-            throw new IllegalStateException();
-            //return "/access-denied.html";
+            //throw new IllegalStateException();
+            return "/access-denied";
         }
     }
 

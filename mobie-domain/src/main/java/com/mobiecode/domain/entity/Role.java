@@ -11,7 +11,7 @@ import java.util.Set;
 @EntityListeners(AuditingEntityListener.class)
 @JsonIgnoreProperties(value = {"createdAt", "updatedAt"}, allowGetters = true)
 public class Role extends BaseEntity {
-
+    private String code;
     private String name;
     private Set<User> users;
 
@@ -21,6 +21,15 @@ public class Role extends BaseEntity {
     @Column(name = "role_id")
     public Long getId() {
         return id;
+    }
+
+    @Column(name = "role_code")
+    public String getCode() {
+        return code;
+    }
+
+    public void setCode(String code) {
+        this.code = code;
     }
 
     @Column(name = "role_name")
@@ -40,4 +49,6 @@ public class Role extends BaseEntity {
     public void setUsers(Set<User> users) {
         this.users = users;
     }
+
+
 }

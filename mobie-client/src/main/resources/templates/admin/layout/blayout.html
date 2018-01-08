@@ -21,21 +21,18 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" th:href="@{/home}">One Event</a>
+                <a class="navbar-brand" th:href="@{/admin/dashboard}">Admin One Event</a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
-                    <li class="active"><a th:href="@{/home}">Home <span class="sr-only">(current)</span></a></li>
-                    <li><a th:href="@{/admin/dashboard}">Admin</a></li>
+                    <li class="active"><a th:href="@{/admin/dashboard}">Dashboard <span class="sr-only">(current)</span></a></li>
                 </ul>
 
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a th:href="@{/role}">Role</a></li>
-                    <li><a th:href="@{/register}">Sign Up</a></li>
-                    <li><a th:href="@{/login}">Login</a></li>
-                    <li><a th:href="@{/about}">About</a></li>
+                    <li><a th:href="@{/admin/role}">Role</a></li>
+                    <li><a th:href="@{/admin/register}">Sign Up</a></li>
                     <li><a th:href="@{/logout}">logout</a></li>
                 </ul>
             </div><!-- /.navbar-collapse -->

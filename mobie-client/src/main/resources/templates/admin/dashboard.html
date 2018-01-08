@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org"
       xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
-      layout:decorator="layout/layout">
+      layout:decorator="admin/layout/blayout">
 <head>
     <title>Welcome to One Event</title>
 </head>
@@ -9,11 +9,11 @@
 <body>
 
 <section layout:fragment="content">
-    <h3>Home : Big olo</h3>
+    <h3>Dash : Welcome Admin Side</h3>
 </section>
 
 <section layout:fragment="footer-js">
-    <script type="text/javascript" th:src="@{/js/main.js}"/>
+    <script type="text/javascript" th:src="@{/js/admin/admin.js}"/>
 </section>
 
 </body>

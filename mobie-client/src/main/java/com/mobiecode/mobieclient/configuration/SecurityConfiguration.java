@@ -1,5 +1,6 @@
 package com.mobiecode.mobieclient.configuration;
 
+import com.mobiecode.core.util.BaseUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Configuration;
@@ -38,70 +39,35 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
-        /*auth.
+        auth.
                 jdbcAuthentication()
                 .usersByUsernameQuery(env.getProperty("security.user.query"))
                 .authoritiesByUsernameQuery(env.getProperty("security.role.query"))
                 .dataSource(dataSource)
-                .passwordEncoder(BaseUtil.getInstance().getPasswordEncoder());*/
-        auth.inMemoryAuthentication()
-                .withUser("user").password("password").roles("USER")
-                .and()
-                .withUser("admin").password("password").roles("ADMIN");
+                .passwordEncoder(BaseUtil.getInstance().getPasswordEncoder());
+//        auth.inMemoryAuthentication()
+//                .withUser("user").password("password").roles("USER")
+//                .and()
+//                .withUser("admin").password("password").roles("ADMIN");
     }
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-//        http
-//                .authorizeRequests()
-//                .antMatchers("/").permitAll()
-//                .antMatchers("/login").permitAll()
-//                .antMatchers("/registration").permitAll()
-//                .antMatchers("/role").permitAll()
-//                .antMatchers("/admin/**").hasAnyRole("ADMIN")
-//                .anyRequest().authenticated()
-//                .and()
-//                .csrf().disable().formLogin().loginPage("/login").failureUrl("/login?error=true")
-//                .defaultSuccessUrl("/admin/home")
-//                .usernameParameter("usr_name")
-//                .passwordParameter("usr_password")
-//                .and()
-//                .logout().logoutRequestMatcher(new AntPathRequestMatcher("/logout"))
-//                .and();
-//                .exceptionHandling().accessDeniedHandler(accessDeniedHandler)
-//                .accessDeniedPage("/access-denied");
-
-       /* http.
-                authorizeRequests()
-                .antMatchers("/","/home").permitAll()
-                .antMatchers("/role").permitAll()
-                .antMatchers("/registration").permitAll()
-                .antMatchers("/resources/**").permitAll()
-                .antMatchers("/admin/**").hasAuthority("ADMIN").anyRequest()
-                .authenticated().and().csrf().disable().formLogin()
-                .loginPage("/login")
-                .permitAll()
-                .failureUrl("/login?error=true")
-                .defaultSuccessUrl("/admin/home")
-                .usernameParameter("email")
-                .passwordParameter("password")
-                .and().logout()
-                .logoutRequestMatcher(new AntPathRequestMatcher("/logout"))
-                .logoutSuccessUrl("/").and().exceptionHandling()
-                .accessDeniedPage("/access-denied");
-*/
-
-
         http
                 .authorizeRequests()
                 .antMatchers("/", "/js/**", "/css/**", "/img/**", "/webjars/**").permitAll()
                 .antMatchers("/about").permitAll()
+                .antMatchers("/role").permitAll()
+                .antMatchers("/register").permitAll()
                 .antMatchers("/home").permitAll()
-                .antMatchers("/admin/**").hasRole("ADMIN")
+                .antMatchers("/admin/**").access("hasRole('ADMIN')")
                 .anyRequest().authenticated()
                 .and()
                 .formLogin()
                 .loginPage("/login")
+                .successHandler(authenticationSuccessHandler)
+                .usernameParameter("usr_name")
+                .passwordParameter("usr_password")
                 .permitAll()
                 .and()
                 .logout()
@@ -109,6 +75,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
                 .clearAuthentication(true)
                 .logoutRequestMatcher(new AntPathRequestMatcher("/logout"))
                 .logoutSuccessUrl("/login?logout")
+                .logoutSuccessHandler(logoutSuccessHandler)
                 .permitAll()
                 .and()
                 .exceptionHandling()

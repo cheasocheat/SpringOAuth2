@@ -20,6 +20,7 @@ public class User extends BaseEntity{
     private String email;
     private String username;
     private String password;
+    private Integer enabled;
     private Set<Role> roles;
 
     @Override
@@ -90,5 +91,14 @@ public class User extends BaseEntity{
 
     public void setRoles(Set<Role> roles) {
         this.roles = roles;
+    }
+
+    @Column(name = "enabled", nullable = false)
+    public Integer getEnabled() {
+        return enabled;
+    }
+
+    public void setEnabled(Integer enabled) {
+        this.enabled = enabled;
     }
 }
