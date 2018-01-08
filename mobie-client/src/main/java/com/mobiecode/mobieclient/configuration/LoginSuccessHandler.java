@@ -1,5 +1,6 @@
 package com.mobiecode.mobieclient.configuration;
 
+import com.mobiecode.core.util.ProfileUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.security.core.Authentication;
@@ -44,27 +45,21 @@ public class LoginSuccessHandler implements AuthenticationSuccessHandler {
     }
 
     protected String setTargetURL(Authentication authentication) {
-        boolean isUser = false;
-        boolean isAdmin = false;
-        Collection<? extends GrantedAuthority> authorities = authentication.getAuthorities();
-        for (GrantedAuthority grantedAuthority : authorities) {
-            if (grantedAuthority.getAuthority().equals("ROLE_USER")) {
-                isUser = true;
-                break;
-            } else if (grantedAuthority.getAuthority().equals("ROLE_ADMIN")) {
-                isAdmin = true;
-                break;
+        try {
+            Collection<? extends GrantedAuthority> authorities = authentication.getAuthorities();
+            for (GrantedAuthority grantedAuthority : authorities) {
+                if (ProfileUtil.isAdminProfile(grantedAuthority)
+                        || ProfileUtil.isEventPlannerProfile(grantedAuthority)
+                        || ProfileUtil.isNormalUserProfile(grantedAuthority)) {
+                    return "/admin/dashboard";
+                } else {
+                    return "/access-denied";
+                }
             }
+        } catch (Exception e) {
+            e.printStackTrace();
         }
-
-        if (isUser) {
-            return "/admin/dashboard";
-        } else if (isAdmin) {
-            return "/admin/dashboard";
-        } else {
-            //throw new IllegalStateException();
-            return "/access-denied";
-        }
+        return "/access-denied";
     }
 
     protected void clearAuthenticationAttributes(HttpServletRequest request) {

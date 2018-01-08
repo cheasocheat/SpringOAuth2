@@ -20,7 +20,7 @@ public class User extends BaseEntity{
     private String email;
     private String username;
     private String password;
-    private Integer enabled;
+    private int enabled;
     private Set<Role> roles;
 
     @Override
@@ -71,6 +71,14 @@ public class User extends BaseEntity{
         this.username = username;
     }
 
+    @Column(name = "enabled", columnDefinition = "int default 100" , nullable = false)
+    public int getEnabled() {
+        return enabled;
+    }
+
+    public void setEnabled(int enabled) {
+        this.enabled = enabled;
+    }
 
     @Column(name = "usr_password")
     @Length(min = 5, message = "*Your password must have at least 5 characters")
@@ -91,14 +99,5 @@ public class User extends BaseEntity{
 
     public void setRoles(Set<Role> roles) {
         this.roles = roles;
-    }
-
-    @Column(name = "enabled", nullable = false)
-    public Integer getEnabled() {
-        return enabled;
-    }
-
-    public void setEnabled(Integer enabled) {
-        this.enabled = enabled;
     }
 }
