@@ -1,4 +1,4 @@
-package com.mobiecode.core.service.impl;
+package com.mobiecode.core.authority;
 
 import com.mobiecode.core.repository.UserRepository;
 import com.mobiecode.domain.entity.Role;

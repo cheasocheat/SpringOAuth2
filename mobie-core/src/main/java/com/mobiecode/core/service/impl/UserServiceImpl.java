@@ -35,7 +35,7 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public void saveUser(User user) {
-        user.setEnabled(1);
+//        user.setEnabled(1);
         user.setPassword(BaseUtil.getInstance().getPasswordEncoder().encode(user.getPassword()));
         user.setStatus(RecordStatus.PUB);
         user.setCreatedUser("Anomymous");

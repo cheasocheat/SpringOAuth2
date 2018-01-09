@@ -63,6 +63,13 @@ public class ApplicationSecurity extends WebSecurityConfigurerAdapter {
                 .authoritiesByUsernameQuery(env.getProperty("security.role.query"))
                 .dataSource(dataSource)
                 .passwordEncoder(new BCryptPasswordEncoder());
+
+        auth
+                .inMemoryAuthentication()
+                .withUser("admin")
+                .password("admin@194")
+                .roles("SU");
+
     }
 
     @Override
@@ -88,6 +95,7 @@ public class ApplicationSecurity extends WebSecurityConfigurerAdapter {
                 .and()
                 .logout()
                 .invalidateHttpSession(true)
+                .deleteCookies("JSESSIONID")
                 .clearAuthentication(true)
                 .logoutRequestMatcher(new AntPathRequestMatcher("/logout"))
                 .logoutSuccessUrl("/login?logout")
@@ -106,6 +114,12 @@ public class ApplicationSecurity extends WebSecurityConfigurerAdapter {
         } else {
             http.csrf().disable();
         }
+    }
+
+    @Override
+    public void configure(WebSecurity web) throws Exception {
+        web.ignoring()
+                .antMatchers("/resources/**");
     }
 
     /*@Override

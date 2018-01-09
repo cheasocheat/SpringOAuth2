@@ -1,0 +1,43 @@
+package com.mobiecode.core.authority;
+
+import com.mobiecode.core.repository.UserRepository;
+import com.mobiecode.domain.entity.User;
+import org.springframework.security.authentication.BadCredentialsException;
+import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+import org.springframework.security.authentication.dao.DaoAuthenticationProvider;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.AuthenticationException;
+import org.springframework.security.core.userdetails.UserDetailsService;
+
+/**
+ * Developer : cheasocheat
+ * Created on 1/9/18 19:39
+ */
+public class MyAuthProvider extends DaoAuthenticationProvider {
+
+    private final UserRepository userRepository;
+
+    @SuppressWarnings("unused")
+    private UserDetailsService userDetailsService;
+
+    public MyAuthProvider(UserRepository userRepository, UserDetailsService userDetailsService){
+        super();
+        this.setUserDetailsService(userDetailsService);
+        this.userRepository = userRepository;
+    }
+
+    @Override
+    public Authentication authenticate(Authentication auth) throws AuthenticationException {
+        final User user = userRepository.findByUsername(auth.getName());
+        if(user == null){
+            throw new BadCredentialsException("Invalid username or password");
+        }
+        final Authentication result = super.authenticate(auth);
+        return new UsernamePasswordAuthenticationToken(user, result.getCredentials(), result.getAuthorities());
+    }
+
+    @Override
+    public boolean supports(Class<?> authentication) {
+        return authentication.equals(UsernamePasswordAuthenticationToken.class);
+    }
+}
