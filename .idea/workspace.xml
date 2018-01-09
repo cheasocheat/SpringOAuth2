@@ -6,22 +6,19 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="204a5558-3c0c-4c07-8ebd-10f67946bb09" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mobie-client/src/main/java/com/mobiecode/mobieclient/configuration/CsrfHeaderFilter.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mobie-client/src/main/webapp/WEB-INF/jboss-web.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mobie-core/src/main/java/com/mobiecode/core/util/ProfileUtil.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mobie-core/src/main/java/com/mobiecode/core/util/UserRole.java" />
+    <list default="true" id="204a5558-3c0c-4c07-8ebd-10f67946bb09" name="Default" comment="CSRF Protection">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mobie-client/src/main/resources/templates/hello.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/mobie-client/src/main/java/com/mobiecode/mobieclient/configuration/SecurityConfiguration.java" afterPath="$PROJECT_DIR$/mobie-client/src/main/java/com/mobiecode/mobieclient/configuration/ApplicationSecurity.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mobie-client/pom.xml" afterPath="$PROJECT_DIR$/mobie-client/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mobie-client/src/main/java/com/mobiecode/mobieclient/MobieClientApplication.java" afterPath="$PROJECT_DIR$/mobie-client/src/main/java/com/mobiecode/mobieclient/MobieClientApplication.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mobie-client/src/main/java/com/mobiecode/mobieclient/configuration/CsrfHeaderFilter.java" afterPath="$PROJECT_DIR$/mobie-client/src/main/java/com/mobiecode/mobieclient/configuration/CsrfHeaderFilter.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mobie-client/src/main/java/com/mobiecode/mobieclient/configuration/LoginSuccessHandler.java" afterPath="$PROJECT_DIR$/mobie-client/src/main/java/com/mobiecode/mobieclient/configuration/LoginSuccessHandler.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mobie-client/src/main/java/com/mobiecode/mobieclient/configuration/SecurityConfiguration.java" afterPath="$PROJECT_DIR$/mobie-client/src/main/java/com/mobiecode/mobieclient/configuration/SecurityConfiguration.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mobie-client/src/main/java/com/mobiecode/mobieclient/configuration/WebMvcConfig.java" afterPath="$PROJECT_DIR$/mobie-client/src/main/java/com/mobiecode/mobieclient/configuration/WebMvcConfig.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mobie-client/src/main/resources/conf/security.properties" afterPath="$PROJECT_DIR$/mobie-client/src/main/resources/conf/security.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mobie-client/src/main/resources/application.properties" afterPath="$PROJECT_DIR$/mobie-client/src/main/resources/application.properties" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mobie-client/src/main/resources/templates/admin/dashboard.html" afterPath="$PROJECT_DIR$/mobie-client/src/main/resources/templates/admin/dashboard.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mobie-client/src/main/resources/templates/admin/layout/blayout.html" afterPath="$PROJECT_DIR$/mobie-client/src/main/resources/templates/admin/layout/blayout.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mobie-client/src/main/resources/templates/error/access-denied.html" afterPath="$PROJECT_DIR$/mobie-client/src/main/resources/templates/error/access-denied.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mobie-client/src/main/resources/templates/layout/layout.html" afterPath="$PROJECT_DIR$/mobie-client/src/main/resources/templates/layout/layout.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mobie-client/src/main/resources/templates/login.html" afterPath="$PROJECT_DIR$/mobie-client/src/main/resources/templates/login.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mobie-core/src/main/resources/database.properties" afterPath="$PROJECT_DIR$/mobie-core/src/main/resources/database.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mobie-domain/src/main/java/com/mobiecode/domain/entity/User.java" afterPath="$PROJECT_DIR$/mobie-domain/src/main/java/com/mobiecode/domain/entity/User.java" />
     </list>
     <ignored path="$PROJECT_DIR$/mobie-ws/target/" />
     <ignored path="$PROJECT_DIR$/mobie-core/target/" />
@@ -40,66 +37,64 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="SecurityConfiguration.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mobie-client/src/main/java/com/mobiecode/mobieclient/configuration/SecurityConfiguration.java">
+      <file leaf-file-name="ApplicationSecurity.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mobie-client/src/main/java/com/mobiecode/mobieclient/configuration/ApplicationSecurity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="498">
-              <caret line="100" column="0" lean-forward="false" selection-start-line="100" selection-start-column="0" selection-end-line="100" selection-end-column="0" />
+            <state relative-caret-position="645">
+              <caret line="43" column="34" lean-forward="false" selection-start-line="43" selection-start-column="34" selection-end-line="43" selection-end-column="34" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <marker date="1515409117000" expanded="true" signature="3793:4250" ph="{...}" />
+                <marker date="1515488992000" expanded="true" signature="4314:4721" ph="{...}" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="WebSecurityConfigurerAdapter.class" pinned="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-config/4.2.3.RELEASE/spring-security-config-4.2.3.RELEASE.jar!/org/springframework/security/config/annotation/web/configuration/WebSecurityConfigurerAdapter.class">
+      <file leaf-file-name="blayout.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mobie-client/src/main/resources/templates/admin/layout/blayout.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="246">
-              <caret line="111" column="0" lean-forward="false" selection-start-line="111" selection-start-column="0" selection-end-line="111" selection-end-column="0" />
+            <state relative-caret-position="450">
+              <caret line="30" column="67" lean-forward="true" selection-start-line="30" selection-start-column="67" selection-end-line="30" selection-end-column="67" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SecurityProperties.class" pinned="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-autoconfigure/1.5.9.RELEASE/spring-boot-autoconfigure-1.5.9.RELEASE.jar!/org/springframework/boot/autoconfigure/security/SecurityProperties.class">
+      <file leaf-file-name="layout.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mobie-client/src/main/resources/templates/layout/layout.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1532">
-              <caret line="19" column="13" lean-forward="false" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
+            <state relative-caret-position="540">
+              <caret line="36" column="20" lean-forward="false" selection-start-line="36" selection-start-column="20" selection-end-line="36" selection-end-column="20" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CsrfHeaderFilter.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/mobie-client/src/main/java/com/mobiecode/mobieclient/configuration/CsrfHeaderFilter.java">
+      <file leaf-file-name="application.properties" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mobie-client/src/main/resources/application.properties">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LogoutConfigurer.class" pinned="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-config/4.2.3.RELEASE/spring-security-config-4.2.3.RELEASE.jar!/org/springframework/security/config/annotation/web/configurers/LogoutConfigurer.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="885">
-              <caret line="79" column="31" lean-forward="false" selection-start-line="79" selection-start-column="31" selection-end-line="79" selection-end-column="31" />
+            <state relative-caret-position="450">
+              <caret line="30" column="0" lean-forward="true" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LogoutSucessHandler.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mobie-client/src/main/java/com/mobiecode/mobieclient/configuration/LogoutSucessHandler.java">
+      <file leaf-file-name="ApplicationConfig.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mobie-core/src/main/java/com/mobiecode/core/configuration/ApplicationConfig.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="19" column="13" lean-forward="false" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
+            <state relative-caret-position="90">
+              <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="JpaConfig.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mobie-core/src/main/java/com/mobiecode/core/configuration/JpaConfig.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="23" column="13" lean-forward="false" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -108,8 +103,8 @@
       <file leaf-file-name="LoginSuccessHandler.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mobie-client/src/main/java/com/mobiecode/mobieclient/configuration/LoginSuccessHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="192">
-              <caret line="48" column="0" lean-forward="false" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
+            <state relative-caret-position="345">
+              <caret line="23" column="3" lean-forward="true" selection-start-line="23" selection-start-column="3" selection-end-line="23" selection-end-column="3" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -117,31 +112,35 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AbstractAuthenticationProcessingFilter.java" pinned="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-web/4.2.3.RELEASE/spring-security-web-4.2.3.RELEASE-sources.jar!/org/springframework/security/web/authentication/AbstractAuthenticationProcessingFilter.java">
+      <file leaf-file-name="CsrfHeaderFilter.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/mobie-client/src/main/java/com/mobiecode/mobieclient/configuration/CsrfHeaderFilter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="50" column="27" lean-forward="false" selection-start-line="50" selection-start-column="27" selection-end-line="50" selection-end-column="27" />
-              <folding />
+            <state relative-caret-position="345">
+              <caret line="23" column="64" lean-forward="false" selection-start-line="23" selection-start-column="60" selection-end-line="23" selection-end-column="64" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mobie-core/pom.xml">
+      <file leaf-file-name="WebMvcConfig.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mobie-client/src/main/java/com/mobiecode/mobieclient/configuration/WebMvcConfig.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="810">
-              <caret line="54" column="57" lean-forward="false" selection-start-line="54" selection-start-column="57" selection-end-line="54" selection-end-column="57" />
-              <folding />
+            <state relative-caret-position="285">
+              <caret line="19" column="5" lean-forward="true" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="login.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mobie-client/src/main/resources/templates/login.html">
+      <file leaf-file-name="AuditEventListener.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mobie-client/src/main/java/com/mobiecode/mobieclient/configuration/AuditEventListener.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="15" column="44" lean-forward="true" selection-start-line="15" selection-start-column="44" selection-end-line="15" selection-end-column="44" />
+            <state relative-caret-position="180">
+              <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="15" selection-end-column="3" />
               <folding />
             </state>
           </provider>
@@ -152,8 +151,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="Class" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -164,6 +163,7 @@
       <find>varchar_ignorecase</find>
       <find>admin</find>
       <find>attemp</find>
+      <find>_csrf</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -182,7 +182,6 @@
         <option value="$PROJECT_DIR$/mobie-core/src/main/java/com/mobiecode/core/service/impl/UserDetailsServiceImpl.java" />
         <option value="$PROJECT_DIR$/mobie-client/src/main/resources/templates/fragments/index.html" />
         <option value="$PROJECT_DIR$/mobie-client/src/main/resources/templates/user/index.html" />
-        <option value="$PROJECT_DIR$/mobie-client/src/main/resources/templates/error/access-denied.html" />
         <option value="$PROJECT_DIR$/mobie-client/src/main/resources/templates/admin.html" />
         <option value="$PROJECT_DIR$/mobie-client/src/main/resources/templates/user.html" />
         <option value="$PROJECT_DIR$/mobie-client/src/main/resources/templates/fragments/footer.html" />
@@ -191,7 +190,6 @@
         <option value="$PROJECT_DIR$/mobie-client/src/main/java/com/mobiecode/mobieclient/configuration/AuditEventListener.java" />
         <option value="$PROJECT_DIR$/mobie-client/src/main/resources/templates/fragments/layout.html" />
         <option value="$PROJECT_DIR$/mobie-client/src/main/resources/templates/content.html" />
-        <option value="$PROJECT_DIR$/mobie-client/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/mobie-client/src/main/resources/static/css/main.css" />
         <option value="$PROJECT_DIR$/mobie-client/src/main/resources/templates/footer.html" />
         <option value="$PROJECT_DIR$/mobie-client/src/main/resources/templates/layout.html" />
@@ -200,7 +198,6 @@
         <option value="$PROJECT_DIR$/mobie-client/src/main/resources/templates/about.html" />
         <option value="$PROJECT_DIR$/mobie-client/src/main/java/com/mobiecode/mobieclient/controller/LoginController.java" />
         <option value="$PROJECT_DIR$/mobie-client/src/main/java/com/mobiecode/mobieclient/controller/HomeController.java" />
-        <option value="$PROJECT_DIR$/mobie-client/src/main/resources/templates/layout/layout.html" />
         <option value="$PROJECT_DIR$/mobie-core/src/main/resources/database.properties" />
         <option value="$PROJECT_DIR$/mobie-core/src/main/java/com/mobiecode/core/service/impl/UserServiceImpl.java" />
         <option value="$PROJECT_DIR$/mobie-domain/src/main/java/com/mobiecode/domain/entity/User.java" />
@@ -211,15 +208,22 @@
         <option value="$PROJECT_DIR$/mobie-core/src/test/java/com/mobiecode/core/CoreApplicationTests.java" />
         <option value="$PROJECT_DIR$/mobie-client/pom.xml" />
         <option value="$PROJECT_DIR$/mobie-client/src/main/resources/conf/security.properties" />
-        <option value="$PROJECT_DIR$/mobie-client/src/main/resources/templates/admin/dashboard.html" />
-        <option value="$PROJECT_DIR$/mobie-client/src/main/java/com/mobiecode/mobieclient/configuration/WebMvcConfig.java" />
         <option value="$PROJECT_DIR$/mobie-client/src/main/java/com/mobiecode/mobieclient/configuration/LoginAccessDeniedHandler.java" />
         <option value="$PROJECT_DIR$/mobie-core/src/main/java/com/mobiecode/core/util/UserRole.java" />
-        <option value="$PROJECT_DIR$/mobie-client/src/main/java/com/mobiecode/mobieclient/configuration/LoginSuccessHandler.java" />
         <option value="$PROJECT_DIR$/mobie-core/src/main/java/com/mobiecode/core/util/ProfileUtil.java" />
-        <option value="$PROJECT_DIR$/mobie-client/src/main/java/com/mobiecode/mobieclient/configuration/CsrfHeaderFilter.java" />
-        <option value="$PROJECT_DIR$/mobie-client/src/main/resources/templates/login.html" />
         <option value="$PROJECT_DIR$/mobie-client/src/main/java/com/mobiecode/mobieclient/configuration/SecurityConfiguration.java" />
+        <option value="$PROJECT_DIR$/mobie-client/src/main/resources/templates/login.html" />
+        <option value="$PROJECT_DIR$/mobie-client/src/main/resources/templates/admin/dashboard.html" />
+        <option value="$PROJECT_DIR$/mobie-client/src/main/java/com/mobiecode/mobieclient/configuration/CsrfHeaderFilter.java" />
+        <option value="$PROJECT_DIR$/mobie-client/src/main/resources/templates/hello.html" />
+        <option value="$PROJECT_DIR$/mobie-client/src/main/java/com/mobiecode/mobieclient/controller/AdminController.java" />
+        <option value="$PROJECT_DIR$/mobie-client/src/main/resources/templates/error/access-denied.html" />
+        <option value="$PROJECT_DIR$/mobie-client/src/main/java/com/mobiecode/mobieclient/configuration/LoginSuccessHandler.java" />
+        <option value="$PROJECT_DIR$/mobie-client/src/main/java/com/mobiecode/mobieclient/configuration/ApplicationSecurity.java" />
+        <option value="$PROJECT_DIR$/mobie-client/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/mobie-client/src/main/resources/templates/admin/layout/blayout.html" />
+        <option value="$PROJECT_DIR$/mobie-client/src/main/resources/templates/layout/layout.html" />
+        <option value="$PROJECT_DIR$/mobie-client/src/main/java/com/mobiecode/mobieclient/configuration/WebMvcConfig.java" />
       </list>
     </option>
   </component>
@@ -244,7 +248,7 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="595" />
+    <option name="x" value="442" />
     <option name="y" value="23" />
     <option name="width" value="1965" />
     <option name="height" value="1367" />
@@ -267,9 +271,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="Scratches" />
       <pane id="PackagesPane" />
-      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -321,6 +325,81 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="mobieclient" type="462c0819:PsiDirectoryNode" />
               <item name="configuration" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mobie-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="springboot-multi-module" type="462c0819:PsiDirectoryNode" />
+              <item name="mobie-client" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mobie-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="springboot-multi-module" type="462c0819:PsiDirectoryNode" />
+              <item name="mobie-client" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mobie-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="springboot-multi-module" type="462c0819:PsiDirectoryNode" />
+              <item name="mobie-client" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="admin" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mobie-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="springboot-multi-module" type="462c0819:PsiDirectoryNode" />
+              <item name="mobie-client" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="admin" type="462c0819:PsiDirectoryNode" />
+              <item name="layout" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mobie-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="springboot-multi-module" type="462c0819:PsiDirectoryNode" />
+              <item name="mobie-client" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="error" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mobie-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="springboot-multi-module" type="462c0819:PsiDirectoryNode" />
+              <item name="mobie-client" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="layout" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mobie-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="springboot-multi-module" type="462c0819:PsiDirectoryNode" />
+              <item name="mobie-client" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mobie-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="springboot-multi-module" type="462c0819:PsiDirectoryNode" />
+              <item name="mobie-client" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="mobie-parent" type="b2602c69:ProjectViewProjectNode" />
@@ -387,7 +466,7 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
+      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -408,14 +487,14 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/mobie-client/src/main" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/mobie-client/src/main/resources/templates/layout" />
       <recent name="$PROJECT_DIR$/mobie-client/src/main/resources/templates" />
       <recent name="$PROJECT_DIR$/mobie-client/src/main/resources/templates/fragments" />
       <recent name="$PROJECT_DIR$/mobie-client/src/main/resources/templates/user" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/mobie-client/src/main" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -655,7 +734,8 @@
       <workItem from="1515376920531" duration="402000" />
       <workItem from="1515378439877" duration="3620000" />
       <workItem from="1515382174075" duration="10059000" />
-      <workItem from="1515407026030" duration="1355000" />
+      <workItem from="1515407026030" duration="1417000" />
+      <workItem from="1515467793619" duration="7368000" />
     </task>
     <task id="LOCAL-00001" summary="Config thymeleaf layout 50%">
       <created>1515234931219</created>
@@ -664,7 +744,14 @@
       <option name="project" value="LOCAL" />
       <updated>1515234931219</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="CSRF Protection">
+      <created>1515409225687</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1515409225687</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -679,10 +766,10 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="28598000" />
+    <option name="totallyTimeSpent" value="36028000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="595" y="23" width="1965" height="1367" extended-state="0" />
+    <frame x="442" y="23" width="1965" height="1367" extended-state="0" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -694,7 +781,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.39937106" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39937106" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3294025" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -705,9 +792,10 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5455975" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296617" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19188768" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19396776" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296932" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -716,7 +804,6 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296932" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -727,23 +814,12 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Config thymeleaf layout 50%" />
-    <option name="LAST_COMMIT_MESSAGE" value="Config thymeleaf layout 50%" />
+    <MESSAGE value="CSRF Protection" />
+    <option name="LAST_COMMIT_MESSAGE" value="CSRF Protection" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/mobie-client/src/main/java/com/mobiecode/mobieclient/configuration/LoginSuccessHandler.java</url>
-          <line>38</line>
-          <properties />
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/mobie-client/src/main/java/com/mobiecode/mobieclient/configuration/LoginSuccessHandler.java</url>
-          <line>48</line>
-          <properties />
-          <option name="timeStamp" value="7" />
-        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/mobie-client/src/main/java/com/mobiecode/mobieclient/configuration/LogoutSucessHandler.java</url>
           <line>29</line>
@@ -752,50 +828,16 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/mobie-client/src/main/java/com/mobiecode/mobieclient/configuration/CsrfHeaderFilter.java</url>
-          <line>24</line>
+          <line>30</line>
           <properties />
           <option name="timeStamp" value="11" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/mobie-client/src/main/java/com/mobiecode/mobieclient/configuration/SecurityConfiguration.java</url>
-          <line>95</line>
-          <properties />
-          <option name="timeStamp" value="13" />
-        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="14" />
+      <option name="time" value="18" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/mobie-core/src/main/java/com/mobiecode/core/CoreApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mobie-core/src/main/java/com/mobiecode/core/service/impl/UserDetailsServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="50" lean-forward="false" selection-start-line="7" selection-start-column="50" selection-end-line="7" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mobie-client/src/main/resources/templates/user/index.html" />
-    <entry file="file://$PROJECT_DIR$/mobie-client/src/main/resources/templates/error/access-denied.html" />
-    <entry file="file://$PROJECT_DIR$/mobie-client/src/main/resources/templates/fragments/index.html" />
-    <entry file="file://$PROJECT_DIR$/mobie-client/src/main/resources/templates/layout/layout.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="7" lean-forward="false" selection-start-line="20" selection-start-column="7" selection-end-line="20" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mobie-client/src/main/resources/templates/user.html" />
-    <entry file="file://$PROJECT_DIR$/mobie-client/src/main/resources/templates/fragments/footer.html" />
-    <entry file="file://$PROJECT_DIR$/mobie-client/src/main/resources/templates/fragments/header.html" />
     <entry file="file://$PROJECT_DIR$/mobie-client/src/main/resources/templates/admin.html" />
     <entry file="file://$PROJECT_DIR$/mobie-client/src/main/resources/templates/layout/layout.html">
       <provider selected="true" editor-type-id="text-editor">
@@ -830,35 +872,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
           <caret line="14" column="37" lean-forward="false" selection-start-line="14" selection-start-column="37" selection-end-line="14" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mobie-client/src/main/resources/templates/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="19" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mobie-client/src/main/java/com/mobiecode/mobieclient/controller/LoginController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mobie-client/src/main/java/com/mobiecode/mobieclient/configuration/AuditEventListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="15" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mobie-client/src/main/resources/templates/layout/layout.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="795">
-          <caret line="53" column="93" lean-forward="false" selection-start-line="53" selection-start-column="93" selection-end-line="53" selection-end-column="93" />
         </state>
       </provider>
     </entry>
@@ -915,14 +928,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/mobie-client/src/main/java/com/mobiecode/mobieclient/configuration/SpringMvcInitializer.java" />
-    <entry file="file://$PROJECT_DIR$/mobie-client/src/main/resources/application.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="25" lean-forward="false" selection-start-line="15" selection-start-column="25" selection-end-line="15" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/mobie-core/src/test/java/com/mobiecode/core/CoreApplicationTests.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
@@ -941,28 +946,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mobie-client/src/main/java/com/mobiecode/mobieclient/MobieClientApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="19" column="42" lean-forward="false" selection-start-line="19" selection-start-column="42" selection-end-line="19" selection-end-column="42" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mobie-client/src/main/resources/conf/security.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mobie-client/src/main/resources/templates/admin/dashboard.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="79" lean-forward="false" selection-start-line="11" selection-start-column="79" selection-end-line="11" selection-end-column="79" />
         </state>
       </provider>
     </entry>
@@ -970,24 +954,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="508">
           <caret line="61" column="105" lean-forward="false" selection-start-line="61" selection-start-column="105" selection-end-line="61" selection-end-column="105" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mobie-client/src/main/java/com/mobiecode/mobieclient/configuration/WebMvcConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="36" lean-forward="false" selection-start-line="10" selection-start-column="36" selection-end-line="10" selection-end-column="36" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mobie-client/src/main/java/com/mobiecode/mobieclient/configuration/LoginAccessDeniedHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="15" column="10" lean-forward="false" selection-start-line="15" selection-start-column="10" selection-end-line="15" selection-end-column="10" />
           <folding />
         </state>
       </provider>
@@ -1031,14 +997,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mobie-core/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="810">
-          <caret line="54" column="57" lean-forward="false" selection-start-line="54" selection-start-column="57" selection-end-line="54" selection-end-column="57" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-config/4.2.3.RELEASE/spring-security-config-4.2.3.RELEASE.jar!/org/springframework/security/config/annotation/web/configurers/LogoutConfigurer.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="885">
@@ -1047,63 +1005,225 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mobie-client/src/main/java/com/mobiecode/mobieclient/configuration/LogoutSucessHandler.java">
+    <entry file="file://$PROJECT_DIR$/mobie-core/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="19" column="13" lean-forward="false" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
+        <state relative-caret-position="810">
+          <caret line="54" column="57" lean-forward="false" selection-start-line="54" selection-start-column="57" selection-end-line="54" selection-end-column="57" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-autoconfigure/1.5.9.RELEASE/spring-boot-autoconfigure-1.5.9.RELEASE.jar!/org/springframework/boot/autoconfigure/security/SecurityProperties.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1532">
-          <caret line="19" column="13" lean-forward="false" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
+        <state relative-caret-position="150">
+          <caret line="20" column="28" lean-forward="false" selection-start-line="20" selection-start-column="28" selection-end-line="20" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-config/4.2.3.RELEASE/spring-security-config-4.2.3.RELEASE.jar!/org/springframework/security/config/annotation/web/configuration/WebSecurityConfigurerAdapter.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="975">
+          <caret line="111" column="0" lean-forward="false" selection-start-line="111" selection-start-column="0" selection-end-line="111" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/mobie-client/src/main/resources/templates/login.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="44" lean-forward="true" selection-start-line="15" selection-start-column="44" selection-end-line="15" selection-end-column="44" />
+        <state relative-caret-position="570">
+          <caret line="38" column="42" lean-forward="true" selection-start-line="38" selection-start-column="42" selection-end-line="38" selection-end-column="42" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mobie-client/src/main/resources/templates/admin/dashboard.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="38" lean-forward="true" selection-start-line="12" selection-start-column="38" selection-end-line="12" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-web/4.2.3.RELEASE/spring-security-web-4.2.3.RELEASE-sources.jar!/org/springframework/security/web/RedirectStrategy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="37" column="9" lean-forward="false" selection-start-line="37" selection-start-column="9" selection-end-line="37" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mobie-client/src/main/resources/conf/security.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="50" lean-forward="false" selection-start-line="4" selection-start-column="41" selection-end-line="4" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-core/4.2.3.RELEASE/spring-security-core-4.2.3.RELEASE.jar!/org/springframework/security/core/Authentication.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="11" column="17" lean-forward="false" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mobie-client/src/main/resources/templates/hello.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="9" lean-forward="false" selection-start-line="7" selection-start-column="9" selection-end-line="7" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mobie-client/src/main/java/com/mobiecode/mobieclient/controller/LoginController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-web/4.2.3.RELEASE/spring-security-web-4.2.3.RELEASE-sources.jar!/org/springframework/security/web/authentication/logout/LogoutSuccessHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="38" column="20" lean-forward="false" selection-start-line="38" selection-start-column="20" selection-end-line="38" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mobie-client/src/main/java/com/mobiecode/mobieclient/controller/AdminController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="8" column="33" lean-forward="true" selection-start-line="8" selection-start-column="33" selection-end-line="8" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mobie-client/src/main/resources/templates/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="19" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mobie-client/src/main/resources/templates/error/access-denied.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="7" lean-forward="true" selection-start-line="15" selection-start-column="7" selection-end-line="15" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mobie-client/src/main/java/com/mobiecode/mobieclient/MobieClientApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="19" column="42" lean-forward="false" selection-start-line="19" selection-start-column="42" selection-end-line="19" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mobie-client/src/main/java/com/mobiecode/mobieclient/configuration/LogoutSucessHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="31" column="49" lean-forward="true" selection-start-line="31" selection-start-column="49" selection-end-line="31" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mobie-client/src/main/java/com/mobiecode/mobieclient/configuration/LoginAccessDeniedHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="16" column="13" lean-forward="false" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mobie-client/src/main/java/com/mobiecode/mobieclient/configuration/AuditEventListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="15" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mobie-core/src/main/java/com/mobiecode/core/configuration/ApplicationConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mobie-core/src/main/java/com/mobiecode/core/configuration/JpaConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="23" column="13" lean-forward="false" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mobie-client/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="30" column="0" lean-forward="true" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mobie-client/src/main/java/com/mobiecode/mobieclient/configuration/ApplicationSecurity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="645">
+          <caret line="43" column="34" lean-forward="false" selection-start-line="43" selection-start-column="34" selection-end-line="43" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <marker date="1515488992000" expanded="true" signature="4314:4721" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mobie-client/src/main/resources/templates/admin/layout/blayout.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="30" column="67" lean-forward="true" selection-start-line="30" selection-start-column="67" selection-end-line="30" selection-end-column="67" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mobie-client/src/main/resources/templates/layout/layout.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="36" column="20" lean-forward="false" selection-start-line="36" selection-start-column="20" selection-end-line="36" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mobie-client/src/main/java/com/mobiecode/mobieclient/configuration/WebMvcConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="5" lean-forward="true" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/mobie-client/src/main/java/com/mobiecode/mobieclient/configuration/LoginSuccessHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="48" column="0" lean-forward="false" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
+        <state relative-caret-position="345">
+          <caret line="23" column="3" lean-forward="true" selection-start-line="23" selection-start-column="3" selection-end-line="23" selection-end-column="3" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mobie-client/src/main/java/com/mobiecode/mobieclient/configuration/SecurityConfiguration.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="498">
-          <caret line="100" column="0" lean-forward="false" selection-start-line="100" selection-start-column="0" selection-end-line="100" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <marker date="1515409117000" expanded="true" signature="3793:4250" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-config/4.2.3.RELEASE/spring-security-config-4.2.3.RELEASE.jar!/org/springframework/security/config/annotation/web/configuration/WebSecurityConfigurerAdapter.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="246">
-          <caret line="111" column="0" lean-forward="false" selection-start-line="111" selection-start-column="0" selection-end-line="111" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/mobie-client/src/main/java/com/mobiecode/mobieclient/configuration/CsrfHeaderFilter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+        <state relative-caret-position="345">
+          <caret line="23" column="64" lean-forward="false" selection-start-line="23" selection-start-column="60" selection-end-line="23" selection-end-column="64" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

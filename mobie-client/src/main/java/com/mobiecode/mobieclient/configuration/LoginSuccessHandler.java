@@ -45,21 +45,19 @@ public class LoginSuccessHandler implements AuthenticationSuccessHandler {
     }
 
     protected String setTargetURL(Authentication authentication) {
+        String target = "/access-denied";
         try {
             Collection<? extends GrantedAuthority> authorities = authentication.getAuthorities();
             for (GrantedAuthority grantedAuthority : authorities) {
                 if (ProfileUtil.isAdminProfile(grantedAuthority)
-                        || ProfileUtil.isEventPlannerProfile(grantedAuthority)
-                        || ProfileUtil.isNormalUserProfile(grantedAuthority)) {
-                    return "/admin/dashboard";
-                } else {
-                    return "/access-denied";
+                        || ProfileUtil.isEventPlannerProfile(grantedAuthority)) {
+                    target = "/admin/dashboard";
                 }
             }
         } catch (Exception e) {
             e.printStackTrace();
         }
-        return "/access-denied";
+        return target;
     }
 
     protected void clearAuthenticationAttributes(HttpServletRequest request) {

@@ -19,13 +19,20 @@ import java.io.IOException;
  */
 public class CsrfHeaderFilter extends OncePerRequestFilter {
     protected Logger logger = LoggerFactory.getLogger(this.getClass());
+
+    protected static final String REQUEST_ATTRIBUTE_NAME = "_csrf";
+    protected static final String RESPONSE_HEADER_NAME = "X-CSRF-HEADER";
+    protected static final String RESPONSE_PARAM_NAME = "X-CSRF-PARAM";
+    protected static final String RESPONSE_TOKEN_NAME = "X-CSRF-TOKEN";
+
+
     @Override
     protected void doFilterInternal(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, FilterChain filterChain) throws ServletException, IOException {
-        logger.info("CSRF Protection");
-        CsrfToken csrf = (CsrfToken) httpServletRequest.getAttribute(CsrfToken.class.getName());
-        if (csrf != null) {
-            updateCookie(httpServletRequest, httpServletResponse, "CSRF-TOKEN", csrf.getToken());
-            updateCookie(httpServletRequest, httpServletResponse, "CSRF-HEADER", csrf.getHeaderName());
+        CsrfToken token = (CsrfToken) httpServletRequest.getAttribute(REQUEST_ATTRIBUTE_NAME);
+        if (token != null) {
+            updateCookie(httpServletRequest, httpServletResponse, RESPONSE_TOKEN_NAME, token.getToken());
+            updateCookie(httpServletRequest, httpServletResponse, RESPONSE_HEADER_NAME, token.getHeaderName());
+            updateCookie(httpServletRequest, httpServletResponse, RESPONSE_PARAM_NAME, token.getParameterName());
         }
         filterChain.doFilter(httpServletRequest, httpServletResponse);
     }
