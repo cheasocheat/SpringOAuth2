@@ -64,16 +64,25 @@ public class ApplicationSecurity extends WebSecurityConfigurerAdapter {
                 .dataSource(dataSource)
                 .passwordEncoder(new BCryptPasswordEncoder());
 
-        auth
+        /*auth
                 .inMemoryAuthentication()
                 .withUser("admin")
                 .password("admin@194")
-                .roles("SU");
+                .roles("SU");*/
 
     }
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
+        /**
+         * Check Enable CSRF Protection
+         */
+        if (securityProperties.isEnableCsrf()) {
+            http.addFilterAfter(new CsrfHeaderFilter(), CsrfFilter.class);
+        } else {
+            http.csrf().disable();
+        }
+
         http
                 .authorizeRequests()
                 .expressionHandler(securityExpressionHandler)
@@ -104,30 +113,12 @@ public class ApplicationSecurity extends WebSecurityConfigurerAdapter {
                 .and()
                 .exceptionHandling()
                 .accessDeniedHandler(accessDeniedHandler);
-
-
-        /**
-         * Check Enable CSRF Protection
-         */
-        if (securityProperties.isEnableCsrf()) {
-            http.addFilterAfter(new CsrfHeaderFilter(), CsrfFilter.class);
-        } else {
-            http.csrf().disable();
-        }
     }
 
     @Override
     public void configure(WebSecurity web) throws Exception {
-        web.ignoring()
-                .antMatchers("/resources/**");
+        web.ignoring().antMatchers("/resources/**");
     }
-
-    /*@Override
-    public void configure(WebSecurity web) throws Exception {
-        web
-                .ignoring()
-                .antMatchers("/resources/**", "/static/**", "/css/**", "/js/**", "/images/**", "/webjars/**");
-    }*/
 
 
 }
