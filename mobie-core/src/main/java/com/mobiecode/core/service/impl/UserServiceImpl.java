@@ -8,6 +8,7 @@ import com.mobiecode.domain.entity.Role;
 import com.mobiecode.domain.entity.User;
 import com.mobiecode.domain.util.RecordStatus;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import java.util.Arrays;
@@ -22,6 +23,9 @@ public class UserServiceImpl implements UserService {
     @Autowired
     private RoleRepository roleRepository;
 
+    @Autowired
+    private PasswordEncoder encoder;
+
 
     @Override
     public User findByUsername(String username) {
@@ -35,8 +39,7 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public void saveUser(User user) {
-        user.setEnabled(1);
-        user.setPassword(BaseUtil.getInstance().getPasswordEncoder().encode(user.getPassword()));
+        user.setPassword(encoder.encode(user.getPassword()));
         user.setStatus(RecordStatus.PUB);
         user.setCreatedUser("Anomymous");
         user.setUpdatedUser("Anomymous");

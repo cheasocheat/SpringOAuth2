@@ -12,6 +12,10 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter
 @Import(ApplicationSecurity.class)
 public class WebMvcConfig extends WebMvcConfigurerAdapter {
 
+    /**
+     * Remove default ROLE_ Prefix
+     * @return
+     */
     @Bean
     public SecurityExpressionHandler<FilterInvocation> securityExpressionHandler() {
         DefaultWebSecurityExpressionHandler defaultWebSecurityExpressionHandler = new DefaultWebSecurityExpressionHandler();

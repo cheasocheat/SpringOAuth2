@@ -1,6 +1,5 @@
 package com.mobiecode.mobieclient.configuration;
 
-import com.mobiecode.core.util.BaseUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.autoconfigure.security.SecurityProperties;
@@ -9,16 +8,15 @@ import org.springframework.context.annotation.PropertySource;
 import org.springframework.core.annotation.Order;
 import org.springframework.core.env.Environment;
 import org.springframework.security.access.expression.SecurityExpressionHandler;
+import org.springframework.security.authentication.dao.DaoAuthenticationProvider;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.builders.WebSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.web.FilterInvocation;
 import org.springframework.security.web.access.AccessDeniedHandler;
-import org.springframework.security.web.access.expression.DefaultWebSecurityExpressionHandler;
 import org.springframework.security.web.authentication.AuthenticationSuccessHandler;
 import org.springframework.security.web.authentication.logout.LogoutSuccessHandler;
 import org.springframework.security.web.csrf.CsrfFilter;
@@ -55,18 +53,33 @@ public class ApplicationSecurity extends WebSecurityConfigurerAdapter {
     @Autowired
     private SecurityExpressionHandler<FilterInvocation> securityExpressionHandler;
 
+    @Autowired
+    private DaoAuthenticationProvider authProvider;
+
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
-        auth.
+        auth.authenticationProvider(authProvider);
+
+       /* auth.
                 jdbcAuthentication()
                 .usersByUsernameQuery(env.getProperty("security.user.query"))
                 .authoritiesByUsernameQuery(env.getProperty("security.role.query"))
                 .dataSource(dataSource)
-                .passwordEncoder(new BCryptPasswordEncoder());
+                .passwordEncoder(new BCryptPasswordEncoder());*/
     }
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
+
+        /**
+         * Check Enable CSRF Protection
+         */
+        if (securityProperties.isEnableCsrf()) {
+            http.addFilterAfter(new CsrfHeaderFilter(), CsrfFilter.class);
+        } else {
+            http.csrf().disable();
+        }
+
         http
                 .authorizeRequests()
                 .expressionHandler(securityExpressionHandler)
@@ -98,22 +111,14 @@ public class ApplicationSecurity extends WebSecurityConfigurerAdapter {
                 .accessDeniedHandler(accessDeniedHandler);
 
 
-        /**
-         * Check Enable CSRF Protection
-         */
-        if (securityProperties.isEnableCsrf()) {
-            http.addFilterAfter(new CsrfHeaderFilter(), CsrfFilter.class);
-        } else {
-            http.csrf().disable();
-        }
     }
 
-    /*@Override
+    @Override
     public void configure(WebSecurity web) throws Exception {
         web
                 .ignoring()
                 .antMatchers("/resources/**", "/static/**", "/css/**", "/js/**", "/images/**", "/webjars/**");
-    }*/
+    }
 
 
 }

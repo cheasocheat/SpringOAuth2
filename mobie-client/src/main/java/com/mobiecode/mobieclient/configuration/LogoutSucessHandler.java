@@ -10,6 +10,7 @@ import org.springframework.stereotype.Component;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.io.IOException;
 
 /**
@@ -27,9 +28,11 @@ public class LogoutSucessHandler extends SimpleUrlLogoutSuccessHandler implement
 
     @Override
     public void onLogoutSuccess(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, Authentication authentication) throws IOException, ServletException {
-        String refererUrl = httpServletRequest.getHeader("Referer");
-//        auditService.track("Logout from: " + refererUrl);
-        logger.debug("Logout from: "+refererUrl);
-        super.onLogoutSuccess(httpServletRequest, httpServletResponse, authentication);
+        final HttpSession session = httpServletRequest.getSession();
+        if (session != null) {
+            session.removeAttribute("user");
+        }
+
+        httpServletResponse.sendRedirect("/login?logout");
     }
 }

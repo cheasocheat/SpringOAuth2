@@ -50,6 +50,7 @@ public class LoginSuccessHandler implements AuthenticationSuccessHandler {
             Collection<? extends GrantedAuthority> authorities = authentication.getAuthorities();
             for (GrantedAuthority grantedAuthority : authorities) {
                 if (ProfileUtil.isAdminProfile(grantedAuthority)
+                        || ProfileUtil.isNormalUserProfile(grantedAuthority)
                         || ProfileUtil.isEventPlannerProfile(grantedAuthority)) {
                     target = "/admin/dashboard";
                 }
