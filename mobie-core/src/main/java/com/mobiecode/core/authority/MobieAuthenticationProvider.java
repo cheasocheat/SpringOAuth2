@@ -30,7 +30,7 @@ public class MobieAuthenticationProvider extends DaoAuthenticationProvider {
         }
 
         final Authentication result = super.authenticate(authentication);
-        return new UsernamePasswordAuthenticationToken(user, result.getCredentials(), result.getAuthorities());
+        return new UsernamePasswordAuthenticationToken(user.getFirstName()+" "+user.getLastName(), result.getCredentials(), result.getAuthorities());
     }
 
 
