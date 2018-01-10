@@ -81,7 +81,7 @@ public class HomeController {
         return "about";
     }
 
-    @GetMapping(value = {"/login"})
+    @GetMapping(value = {"/account/login"})
     public String login(Model model, String error, String logout) {
         if (error != null)
             model.addAttribute("error", "Your username and password is invalid.");

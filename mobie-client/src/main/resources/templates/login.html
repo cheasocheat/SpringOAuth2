@@ -12,7 +12,7 @@
     <div class="row">
         <div class="col-md-6 col-md-offset-3">
             <h1>Login page</h1>
-            <form th:action="@{/login}" method="post">
+            <form th:action="@{/account/login}" method="post">
                 <!--<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>-->
                 <div th:if="${param.error}">
                     <div class="alert alert-danger">

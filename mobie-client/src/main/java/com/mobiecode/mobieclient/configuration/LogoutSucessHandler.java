@@ -32,7 +32,6 @@ public class LogoutSucessHandler extends SimpleUrlLogoutSuccessHandler implement
         if (session != null) {
             session.removeAttribute("user");
         }
-
-        httpServletResponse.sendRedirect("/login?logout");
+        httpServletResponse.sendRedirect(httpServletRequest.getContextPath()+"/login?logout");
     }
 }
