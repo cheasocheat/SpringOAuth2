@@ -36,6 +36,12 @@ public class HomeController {
         return "role";
     }
 
+    @RequestMapping(value = {"/map"}, method = RequestMethod.GET)
+    public String getMapPage(Model model) {
+        model.addAttribute("map", new Role());
+        return "map";
+    }
+
     @RequestMapping(value = {"/role"}, method = RequestMethod.POST)
     public String createRole(@Valid Role role, Model model) {
         logger.info(role.getName());

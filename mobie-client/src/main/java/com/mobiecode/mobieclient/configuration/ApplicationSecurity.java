@@ -85,6 +85,7 @@ public class ApplicationSecurity extends WebSecurityConfigurerAdapter {
                 .expressionHandler(securityExpressionHandler)
                 .antMatchers("/", "/resources/**", "/static/**", "/js/**", "/css/**", "/img/**", "/webjars/**").permitAll()
                 .antMatchers("/about").permitAll()
+                .antMatchers("/map").permitAll()
                 .antMatchers("/role").permitAll()
                 .antMatchers("/register").permitAll()
                 .antMatchers("/home").permitAll()
