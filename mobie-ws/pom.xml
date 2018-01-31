@@ -60,6 +60,13 @@
             <optional>true</optional>
         </dependency>
 
+        <!-- oauth -->
+        <dependency>
+            <groupId>org.springframework.security.oauth</groupId>
+            <artifactId>spring-security-oauth2</artifactId>
+        </dependency>
+
+
     </dependencies>
 
     <build>
