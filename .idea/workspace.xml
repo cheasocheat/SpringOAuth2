@@ -7,11 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="204a5558-3c0c-4c07-8ebd-10f67946bb09" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mobie-client/src/main/resources/templates/map.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mobie-client/src/main/java/com/mobiecode/mobieclient/configuration/ApplicationSecurity.java" afterPath="$PROJECT_DIR$/mobie-client/src/main/java/com/mobiecode/mobieclient/configuration/ApplicationSecurity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mobie-client/src/main/java/com/mobiecode/mobieclient/controller/HomeController.java" afterPath="$PROJECT_DIR$/mobie-client/src/main/java/com/mobiecode/mobieclient/controller/HomeController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mobie-client/src/main/resources/static/css/main.css" afterPath="$PROJECT_DIR$/mobie-client/src/main/resources/static/css/main.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mobie-client/src/main/resources/templates/layout/layout.html" afterPath="$PROJECT_DIR$/mobie-client/src/main/resources/templates/layout/layout.html" />
     </list>
     <ignored path="$PROJECT_DIR$/mobie-ws/target/" />
@@ -31,108 +27,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="map.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/mobie-client/src/main/resources/templates/map.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
-              <caret line="30" column="25" lean-forward="true" selection-start-line="30" selection-start-column="25" selection-end-line="30" selection-end-column="25" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LoginSuccessHandler.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mobie-client/src/main/java/com/mobiecode/mobieclient/configuration/LoginSuccessHandler.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="50" column="0" lean-forward="false" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mobie-client/src/main/resources/templates/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="layout.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="layout.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/mobie-client/src/main/resources/templates/layout/layout.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="885">
-              <caret line="59" column="40" lean-forward="false" selection-start-line="59" selection-start-column="28" selection-end-line="59" selection-end-column="40" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="main.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mobie-client/src/main/resources/static/css/main.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="about.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mobie-client/src/main/resources/templates/about.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="12" column="10" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="18" selection-end-column="7" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="WebMvcConfig.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mobie-client/src/main/java/com/mobiecode/mobieclient/configuration/WebMvcConfig.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="dashboard.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mobie-client/src/main/resources/templates/admin/dashboard.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="12" column="24" lean-forward="true" selection-start-line="12" selection-start-column="24" selection-end-line="12" selection-end-column="24" />
-              <folding>
-                <marker date="1517389314000" expanded="true" signature="510:521" ph="..." />
-                <marker date="1517389314000" expanded="true" signature="510:530" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ApplicationSecurity.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mobie-client/src/main/java/com/mobiecode/mobieclient/configuration/ApplicationSecurity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="580">
-              <caret line="87" column="34" lean-forward="false" selection-start-line="87" selection-start-column="34" selection-end-line="87" selection-end-column="34" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="HomeController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mobie-client/src/main/java/com/mobiecode/mobieclient/controller/HomeController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
-              <caret line="41" column="19" lean-forward="false" selection-start-line="41" selection-start-column="19" selection-end-line="41" selection-end-column="19" />
+            <state relative-caret-position="540">
+              <caret line="36" column="53" lean-forward="false" selection-start-line="36" selection-start-column="53" selection-end-line="36" selection-end-column="53" />
               <folding />
             </state>
           </provider>
@@ -225,9 +124,9 @@
         <option value="$PROJECT_DIR$/mobie-client/src/main/resources/templates/admin/dashboard.html" />
         <option value="$PROJECT_DIR$/mobie-client/src/main/java/com/mobiecode/mobieclient/configuration/ApplicationSecurity.java" />
         <option value="$PROJECT_DIR$/mobie-client/src/main/java/com/mobiecode/mobieclient/controller/HomeController.java" />
-        <option value="$PROJECT_DIR$/mobie-client/src/main/resources/templates/layout/layout.html" />
         <option value="$PROJECT_DIR$/mobie-client/src/main/resources/static/css/main.css" />
         <option value="$PROJECT_DIR$/mobie-client/src/main/resources/templates/map.html" />
+        <option value="$PROJECT_DIR$/mobie-client/src/main/resources/templates/layout/layout.html" />
       </list>
     </option>
   </component>
@@ -684,7 +583,7 @@
       <workItem from="1515652370784" duration="811000" />
       <workItem from="1515817891187" duration="2624000" />
       <workItem from="1515980662064" duration="359000" />
-      <workItem from="1517384296402" duration="3844000" />
+      <workItem from="1517384296402" duration="4203000" />
     </task>
     <task id="LOCAL-00001" summary="Config thymeleaf layout 50%">
       <created>1515234931219</created>
@@ -735,7 +634,14 @@
       <option name="project" value="LOCAL" />
       <updated>1517384349747</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Google map embedded">
+      <created>1517389351070</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1517389351070</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -750,7 +656,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="47317000" />
+    <option name="totallyTimeSpent" value="47676000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="2560" height="1367" extended-state="6" />
@@ -803,7 +709,8 @@
     <MESSAGE value="Customize Principle Success" />
     <MESSAGE value="Fully function web client security" />
     <MESSAGE value="Not finish OAuth2" />
-    <option name="LAST_COMMIT_MESSAGE" value="Not finish OAuth2" />
+    <MESSAGE value="Google map embedded" />
+    <option name="LAST_COMMIT_MESSAGE" value="Google map embedded" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1184,14 +1091,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mobie-client/src/main/resources/templates/layout/layout.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="885">
-          <caret line="59" column="40" lean-forward="false" selection-start-line="59" selection-start-column="28" selection-end-line="59" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/mobie-client/src/main/resources/templates/about.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
@@ -1236,6 +1135,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="450">
           <caret line="30" column="25" lean-forward="true" selection-start-line="30" selection-start-column="25" selection-end-line="30" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mobie-client/src/main/resources/templates/layout/layout.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="36" column="53" lean-forward="false" selection-start-line="36" selection-start-column="53" selection-end-line="36" selection-end-column="53" />
           <folding />
         </state>
       </provider>
