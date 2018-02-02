@@ -86,6 +86,8 @@ public class ApplicationSecurity extends WebSecurityConfigurerAdapter {
                 .antMatchers("/", "/resources/**", "/static/**", "/js/**", "/css/**", "/img/**", "/webjars/**").permitAll()
                 .antMatchers("/about").permitAll()
                 .antMatchers("/map").permitAll()
+                .antMatchers("/map_emb").permitAll()
+                .antMatchers("/map_direction").permitAll()
                 .antMatchers("/role").permitAll()
                 .antMatchers("/register").permitAll()
                 .antMatchers("/home").permitAll()

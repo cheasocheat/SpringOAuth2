@@ -42,6 +42,20 @@ public class HomeController {
         return "map";
     }
 
+    @RequestMapping(value = {"/map_direction"}, method = RequestMethod.GET)
+    public String getDirectionMap(Model model) {
+        model.addAttribute("map_direction", new Role());
+        return "map_direction";
+    }
+
+
+    @RequestMapping(value = {"/map_emb"}, method = RequestMethod.GET)
+    public String getMapEmbPage(Model model) {
+        model.addAttribute("map_emb", new Role());
+        return "map_emb";
+    }
+
+
     @RequestMapping(value = {"/role"}, method = RequestMethod.POST)
     public String createRole(@Valid Role role, Model model) {
         logger.info(role.getName());
