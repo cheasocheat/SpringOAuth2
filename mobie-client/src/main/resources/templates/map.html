@@ -16,7 +16,7 @@
     </style>
 </head>
 
-<body onload="loadMap()">
+<body>
 
 <section layout:fragment="content">
     <div id="map_container"></div>
@@ -35,6 +35,7 @@
                 zoom: 18,
                 center: latlng,
                 mapTypeId: google.maps.MapTypeId.ROADMAP,
+//                mapTypeId: 'hybrid'
 //                gestureHandling: 'cooperative' // Disable scroll
             };
 

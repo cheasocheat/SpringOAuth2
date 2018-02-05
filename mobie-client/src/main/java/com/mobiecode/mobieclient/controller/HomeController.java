@@ -48,6 +48,11 @@ public class HomeController {
         return "map_direction";
     }
 
+    @RequestMapping(value = {"/way_point"}, method = RequestMethod.GET)
+    public String getWayPoint(Model model) {
+        model.addAttribute("way_point", new Role());
+        return "way_point";
+    }
 
     @RequestMapping(value = {"/map_emb"}, method = RequestMethod.GET)
     public String getMapEmbPage(Model model) {
